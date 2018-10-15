@@ -4,7 +4,6 @@ import './Button.css';
 
 class Button extends Component{
 	clickHandler(e){
-		// conditional to handle different types of buttons
 		switch (this.props.button){
 			case 0:
 			case 1:
@@ -35,7 +34,7 @@ class Button extends Component{
 				console.log('Button.js: Something went wrong!!', e);
 		}
 	}
-	
+
 	render(){
 		const buttonName = this.props.button;
 
@@ -52,18 +51,18 @@ class Button extends Component{
 				</button>
 			);
 		} else if (buttonName >= 1 || buttonName <= 9 || buttonName === '.'){
-            return(
+			return(
 				<button className="button" name={this.props.button} onClick={this.clickHandler.bind(this)} key={this.props.button}>
 					{this.props.button}
 				</button>
 			);
-        } else {
+		} else {
 			return(
 				<button className="button primaryOperatorButton" name={this.props.button} onClick={this.clickHandler.bind(this)} key={this.props.button}>
 					{this.props.button}
 				</button>
 			);
-		}		
+		}
 	}
 };
 
