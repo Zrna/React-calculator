@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/src/Components/Button/old-Button.js
+/src/Containers/old-Calculator.js
 
 # testing
 /coverage
